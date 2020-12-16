@@ -180,3 +180,21 @@ plt.show()
 ```
 第二天用了一个小时把第一天没敲的代码敲上了 ，嗯，现在开始进行观察。。。
 
+###第二天
+逻辑回归是适合于二倍以上的分类方法，传统方法
+突出点：模型简单，模型的可解释性强
+由函数图像的对称点将其结果分为0和1
+
+Demo
+库：numpy matplotlib.pyplot seaborn 
+逻辑回归模型函数： sklearn.liner_model
+查看输入的x和y值所得出的w0,w的方法  intercept_ , coef_
+
+模型数据可视化的4步
+plt.
+plt.
+plt.
+plt.
+但是，x_fearures[:,1] 是什么意思呢？还有s=50又是指什么？？，为啥cmap='viridis'？？？
+
+
