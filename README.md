@@ -207,3 +207,30 @@ plt.<br>
 ![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/3.jpg)<br>![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/4.jpg)
 <br>
 我将问题指向了ARRAY这个数组，应该是数组的用法，后面我查询了数组，嘿嘿，我懂了<br>![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/5.jpg)
+python中数组和列表切片用法应该是相似而不同的，我用看列表切片的思维去看数组，导致我一直看不懂，哎。<br>
+
+终于可以接下来看了。。
+可视化决策边界的前置知识<br>
+ylim(limits) 设置当前坐标轴或图表的 y 轴限制。将限制指定为窗体的两个元素向量 [ymin ymax], 其中 ymax 大于 ymin,<br>
+语法：X,Y = numpy.meshgrid(x, y)<br>
+输入的x，y，就是网格点的横纵坐标列向量（非矩阵）<br>
+输出的X，Y，就是坐标矩阵。<br>
+[meshgrid](https://blog.csdn.net/lllxxq141592654/article/details/81532855)<br>
+linspace是Matlab中的均分计算指令，用于产生x1,x2之间的N点行线性的矢量。<br>
+[predict_proba](https://blog.csdn.net/anan15151529/article/details/102632463)<br>
+[reshape](https://blog.csdn.net/qq_28618765/article/details/78083895)<br>
+[ravel](https://numpy.org/doc/stable/reference/generated/numpy.ravel.html)<br>
+可视化预测新样本的知识前置<br>
+用一个箭头指向要注释的地方，再写上一段话的行为，叫做annotate<br>
+[zhihu](https://zhuanlan.zhihu.com/p/32501335)<br>
+训练样本，训练样本，我总觉得训练这两字怪怪的，哈哈<br>
+<br>
+en,我觉得这个边界线跟结尾函数的对称点差不多嘛~<br>
+
+忽然对源代码有了点好奇，额，翻墙看了下是深渊，不止是坑那么简单的事了，先不管了,先掌握如何利用工具，而不探究工具本身，面向对象的好处不就是这样么，止住我的好奇心吧[?](https://scikit-learn.org/stable/modules/classes.html)<br>
+看到这里，我觉得这里的预测，指的是利用算法，把需要结果的概率求出，便是这里的含义了。<br>
+hhhh,到看花花的地方了，我也想一日看尽长安花的日子快点到来啊，要努力思考！<br>
+
+
+
+
