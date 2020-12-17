@@ -203,3 +203,4 @@ plt.<br>
 继续昨天的问题，s的意思，还有camp，必应了一下，发现简书的解释比较清晰，[带个链接]（https://www.jianshu.com/p/53e49c02c469）<br>
 但是，x_fearures两个数的意思还是想不明白，待我再看看。。
 
+[image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/1.jpg)
