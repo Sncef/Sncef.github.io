@@ -203,4 +203,7 @@ plt.<br>
 继续昨天的问题，s的意思，还有camp，必应了一下，发现简书的解释比较清晰，[带个链接]（https://www.jianshu.com/p/53e49c02c469）<br>
 但是，x_fearures两个数的意思还是想不明白，待我再看看。。
 
-[image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/1.jpg)
+经过我测试![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/1.jpg)<br>![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/2.jpg)<br>
+![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/3.jpg)<br>![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/4.jpg)
+<br>
+我将问题指向了ARRAY这个数组，应该是数组的用法，后面我查询了数组，嘿嘿，我懂了<br>![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/5.jpg)
