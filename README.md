@@ -245,6 +245,12 @@ ax.scatter(iris_all_class2[:,0], iris_all_class0[:,1], iris_all_class0[:,2],labe
 #### Step 5
 我觉得这段话是重点，为了正确评估模型性能，将数据划分为训练集和测试集，并在训练集上训练模型，在测试集上验证模型性能。那么，如何实现呢，让我往下看~~~ <br>
 
+```
 
-
-
+iris_target = data.target
+iris_features = pd.DataFrame(data=data.data, columns=data.feature_names)
+iris_features_part = iris_features.iloc[:100]
+iris_target_part = iris_target[:100]
+```
+为啥第四行没有.iloc呢？？？
+明天继续吧，没时间了，明天休息时间多~~~ 干巴爹
