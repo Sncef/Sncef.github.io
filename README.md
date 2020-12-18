@@ -322,6 +322,9 @@ x = rng.randint(5, size= (1, 100))
 print(clf.predict_proba(x))
 print(clf.predict(x))
 ```
+填个第三天结尾的疑问！
+[jianshu](https://www.jianshu.com/p/732858f89a00)
+
 
 
 
