@@ -324,7 +324,9 @@ print(clf.predict(x))
 ```
 填个第三天结尾的疑问！
 [jianshu](https://www.jianshu.com/p/732858f89a00)
-
+[image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/6.png)
+[image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/7.png)
+iloc对二维数据的读取用，第三行是表格，第四行是列表，不用iloc来选择。。
 
 
 
