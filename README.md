@@ -277,6 +277,52 @@ print('The accuracy of the Logistic Regression is:', metrics.accuracy_score(y_tr
 通过结果我们发现·····出现了一定的错误。我们从可视化的时候也可以发现，这里指的是上面那三维三点图吧，蓝色的点附近毛都没有，绿色和橙色点
 有几乎重合的的，也就是边界模糊。<br>
 ##TASK 2
+e，学代码先从敲代码开始
+```
+import warnings
+warnings.filterwarnings('ignore')
+import numpy as np
+from sklearn import datasets
+from sklearn.navie_bayes import GaussianNB
+from sklearn.model_selection import train_test_split
+
+X,y = datasets.load_iris(return_X_y=True)
+X_train, X_test, y_tarin, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+clf = GaussianNB(var_smoothing=1e-8)
+clf.fit(X_train, y_train)
+y_pred = clf.predict(X_test)
+acc = np.sun(y_test == y_pred) / X_test.shape[0]
+print('Test Acc : %.3f'% acc)
+
+y_proba = clf.predict_proba(X_test[:1])
+print(clf.predict(X_test[:1]))
+print('预计的概率值:', y_proba)
+
+
+import random
+import numpy as np 
+from sklearn.naive_bayes import Categorica1NB
+from sklearn.model_selection import train_test_split
+
+rng = np.random.RandomState(1)
+X = rng.randint(5, size=(600, 100))
+y = np.array([1,2,3,4,5,6] * 100)
+data = np.c_[X, y]
+random.shuffle(data)
+X = data[:,:-1]
+y = data[:, -1]
+X_train, X_test, y_train, y_test = train_test_split(X, y , test_size=0.2, random_state=0)
+
+clf = Categorica1NB(alpha=1)
+clf.fit(X_train, y_train)
+acc = clf.score(X_test, y_test)
+print('Test Acc : %.3f % acc)
+
+x = rng.randint(5, size= (1, 100))
+print(clf.predict_proba(x))
+print(clf.predict(x))
+```
+
 
 
 
