@@ -155,7 +155,7 @@ clf.fit(x_train, y_train)
 print('the weight of Logistic Regression:\n', clf.coef_)
 print('the intercept(w0) of Logistic Regression:\n', clf.intercept_)
 
-train_predict = clf.predict(x_trrain)
+train_predict = clf.predict(x_train)
 test_predict = clf.predict(x_test)
 
 train_predict = clf.predict(x_train)
@@ -252,4 +252,31 @@ iris_features_part = iris_features.iloc[:100]
 iris_target_part = iris_target[:100]
 ```
 为啥第四行没有.iloc呢？？？
-明天继续吧，没时间了，明天休息时间多~~~ 干巴爹
+明天继续吧，没时间了，明天休息时间多~~~ 干巴爹<br>
+
+### 第四天
+在群里看到了我最近隐隐感受到还没凝聚成语言的话语。<br>
+逻辑回归可以二分类，也可以多分类。他下面得到了三组参数，就证明做三分类的时候训练了三个分类器<br>
+所以数据的作用是得出预测未来的参数咯~<br>
+数据划分为两种，80%用于得出预测参数，20%用于验证准确性。<br>
+嗯，应该是有一个数据转化为参数的流程可以具体归纳的，我看看啊，利用model_selection划分数据，然后用了fit将数据转化为预测参数，
+clf.fit，这个是用逻辑回归的算法clf，那么是不是有用其他算法就有其他xxx.fit呢，哈哈，如何查看逻辑回归得出的参数这步我知道就好了，黑匣子黑到底，
+预测居然把80%也搞进去了，这个有必要？如果算法已经被验证是正常的那么这步应该不用吧，直接代入那20%不就可以了？？<br>
+在利用热力图对于结果进行可视化中，我没看到
+```
+train_predict = clf.predict(x_train)
+print('The accuracy of the Logistic Regression is:', metrics.accuracy_score(y_train,train_predict))
+```
+这两条代码对热力图的影响，是不是删除也不影响图呢？<br>
+另外我搜了搜[model_selection]（https://blog.csdn.net/qq_41861526/article/details/88617840?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.control） 加深了model_selection的split的理解。<br>
+往上翻了下我才看出来二分和三分的代码区别，上面有个注释是这么说的，其对应的类别标签为，其中0，1，2分别代表
+'setosa','versicolor',virginica'三种不同花的类别，每个类别数量那里也值得注意，2 50 1 50 0 50 ,也就解释了[:100]的意思了。<br>
+二分类那里用的是iris_features_part<br>
+三分类直接用iris_feature<br>
+[混淆矩阵](https://baike.baidu.com/item/%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5/10087822?fr=aladdin)<br>
+通过结果我们发现·····出现了一定的错误。我们从可视化的时候也可以发现，这里指的是上面那三维三点图吧，蓝色的点附近毛都没有，绿色和橙色点
+有几乎重合的的，也就是边界模糊。<br>
+##TASK 2
+
+
+
