@@ -200,7 +200,7 @@ plt.<br>
 ### 第三天
 哈哈，我醒了，今天下午4点就醒了，比昨天早两个小时，昨晚上班不忙睡了一会今天早点起开心！<br>
 
-继续昨天的问题，s的意思，还有camp，必应了一下，发现简书的解释比较清晰，[带个链接]（https://www.jianshu.com/p/53e49c02c469）<br>
+继续昨天的问题，s的意思，还有camp，必应了一下，发现简书的解释比较清晰，[lianjie](https://www.jianshu.com/p/53e49c02c469) <br>
 但是，x_fearures两个数的意思还是想不明白，待我再看看。。
 
 经过我测试![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/1.jpg)<br>![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/2.jpg)<br>
@@ -268,7 +268,7 @@ train_predict = clf.predict(x_train)
 print('The accuracy of the Logistic Regression is:', metrics.accuracy_score(y_train,train_predict))
 ```
 这两条代码对热力图的影响，是不是删除也不影响图呢？<br>
-另外我搜了搜[model_selection]（https://blog.csdn.net/qq_41861526/article/details/88617840?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.control） 加深了model_selection的split的理解。<br>
+另外我搜了搜[model_selection](https://blog.csdn.net/qq_41861526/article/details/88617840?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.control） 加深了model_selection的split的理解。<br>
 往上翻了下我才看出来二分和三分的代码区别，上面有个注释是这么说的，其对应的类别标签为，其中0，1，2分别代表
 'setosa','versicolor',virginica'三种不同花的类别，每个类别数量那里也值得注意，2 50 1 50 0 50 ,也就解释了[:100]的意思了。<br>
 二分类那里用的是iris_features_part<br>
