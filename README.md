@@ -328,6 +328,13 @@ print(clf.predict(x))
 ![image](https://github.com/Sncef/Sncef.github.io/blob/main/photo/7.png)
 iloc对二维数据的读取用，第三行是表格，第四行是列表，不用iloc来选择。。
 
+### 第五天
+TASK 2 先粗后细吧,还是先搜我不懂的内容<br>
+[warnings](https://blog.konghy.cn/2017/12/16/python-warnings/)<br>
+[shuffle](https://www.runoob.com/python/func-number-shuffle.html)<br>
+
+
+
 
 
 
