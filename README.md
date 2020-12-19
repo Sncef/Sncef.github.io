@@ -283,15 +283,15 @@ import warnings
 warnings.filterwarnings('ignore')
 import numpy as np
 from sklearn import datasets
-from sklearn.navie_bayes import GaussianNB
+from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 
 X,y = datasets.load_iris(return_X_y=True)
-X_train, X_test, y_tarin, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 clf = GaussianNB(var_smoothing=1e-8)
 clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
-acc = np.sun(y_test == y_pred) / X_test.shape[0]
+acc = np.sum(y_test == y_pred) / X_test.shape[0]
 print('Test Acc : %.3f'% acc)
 
 y_proba = clf.predict_proba(X_test[:1])
