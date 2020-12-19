@@ -343,8 +343,14 @@ y = data[:, -1]
 
 https://www.jianshu.com/p/9c153d82ba2d<br>
 ###### 我们可以看出就是对每一个变量的多加了一个频数alpha。当alpha=0时，就是极大似然估计。通常取值alpha=1，这就是拉普拉斯平滑，这又叫做贝叶斯估计，主要时因为如果使用极大似然估计，如果某个特征值在训练数据中没有出现，这时候会出现概率为0的情况，导致整个估计都为0，因此引入贝叶斯估计。
-
-
+学到现在。总感到有些地方不清晰，我想了想，是因为2.3里面的引入的数据集被隐藏了具体数据造成的，在TASK 1 中运用了数据查看的手段来看，这里没有，于是，我返回了TASK 1 重新学习查看数据的手段。<br>
+###### 好像先要将数据利用Pandas转化为DataFrame格式才能用下面的查看手段，我直接用报了个错AttributeError: 'numpy.ndarray' object has no attribute 'head',但是具体是不是真的还要实践。。。
+TASK 1给出的方法有<br>
+利用.info()查看数据的整体信息 iris_features.head() <br>
+进行简单的数据查看，我们可以利用.head().tail() iris_features.head() <br>
+利用value_counts函数查看每个类别数量 pd.Series(iris_target).value_counts()<br>
+对于特征进行一些统计描述 iris_featues.describe() <br>
+额，今天就到这里了，留个悬念给明天。。剩下的一点时间看看能不能优化下空间哈！
 
 
 
