@@ -363,5 +363,145 @@ dict_keys(['data', 'target', 'target_names', 'DESCR', 'feature_names'])
 ```
 可是，我没设定target,DESCR啊，为啥会在keys里出现，莫非~~~~ 只能对这五个进行数据查看？为毛X_train看不了，然后，我仔细看了有关X_train诞生的代码，额，好像是随机数，可能，每次，不一样，所以，没法子看，只需要，知道，是，十分之八，就，好，了。。。看来，我还缺少很多能彻底看懂这三个task的前置知识啊，得多看书了。。。<br>
 
+#### 第7天
+TASK 3<br>
+不知不觉时间已过半，第一天照常敲代码走起！！！<br>
+```
+demoshujuji knn
 
+import numpy as np
+import matplotlib.pylot as plt
+from matplotlib.colors import ListedColormap
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn import datasets
+
+iris = datasets.load_iris()
+X = iris.data[:, :2]
+y = iris.target
+
+k_list = [1, 3, 5, 8, 10, 15]
+h = .02
+camp_light = ListedColormap(['orange', 'cyan', 'cornflowerblue'])
+camp_bold = ListedColormap(['darkorange', 'c', 'darkblue'])
+
+plt.figure(ifgsize=(15,14))
+
+for ind,k in enumerate(k_list):
+    clf = KNeighborsClassifier(k):
+    clf.fit(X, y)
+    
+    x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() +1
+    y_min, y_max = X[:, 0].min() - 1, X[:, 0].max() +1
+    xx, yy = np.meshgrid(np.arrange(x_min, x_max, h),
+                        (np.arrange(y_min, y_max, h))
+    z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
+    z = Z.reshape(xx.shape)
+    
+    plt.subplot(321+ind)
+    plt.pcolormesh(xx, yy, Z, cmpa=camp_light)
+    plt.scatter(X[:, 0], X[:, 1], c= y, cmap=cmap_bold.
+                edgecolor='k', s=20)
+    plt.xlim(xx.min(), xx.max())
+    plt.ylim(yy.min(), yy.max())
+    plt.title("3-Class classification (k = %i)"% k)
+plt.show()
+```
+```
+import numpy as np
+from sklearn import datasets
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import train_test_split
+
+iris = dataset.load_iris()
+X = iris.data
+y = iris.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+clf = KNeighborsClassifier(n_neighbors=5, p=2, metric="minkowski")
+clf.fit(X_train, y_train)
+
+X_pred = clf.predict(X_test)
+acc = sum(X_pred == y_test) / X_pred.shape[0]
+print("预测的准确率ACC： %.3f" % acc)
+```
+```
+import numpy as np
+import matplotlib.pyplot as plt 
+from sklearn.neighbors import KNeighborsRegressor
+np.random.seed(0)
+X = np.sort(5*np.random.rand(40, 1), axis=0)
+T = np.linspace(0, 5, 500)[:, np.newaxis]
+y = np.sin(X).ravel()
+y[::5] += 1*(0.5 - np.random.rand(8))
+
+n_neighbors = [1, 3, 5, 8, 10, 40]
+plt.figure(figsize=(10,20))
+for i,k in enumerate(n_neighbors):
+    clf = KNeighborsRegressor(n_neighbors=k, p=2, mietric="minkowski")
+    clf.fit(X, y)
+    y_ = clf.predict(T)
+    plt.subplot(6, 1, i + 1)
+    plt.scatter(X, y, color='red', label='data')
+    plt.plot(T, y_, color='navy', label='prediction')
+    plt.axis('tight')
+    plt.legend()
+    plt.title("KNeighborsRegressor (k = %i)" % (k))
+plt. tight_layout()
+plt.show()
+```
+```
+!wget https://tianchi-media.oss-cn-beijing.aliyuncs.com/DSW/3K/horse-colic.csv
+!wget https://tianchi-media.oss-cn-beijing.aliyuncs.com/DSW/3K/horse-colic.names
+
+import numpy as np
+import pandas as pd
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.impute import KNNImputer
+from sklearn.metrics.pairwise import nan_euclidean_distances
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import RepeatedStratifiedKFold
+from sklearn.pipline import Pipeline
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+
+X = [[1, 2 np.nan], [3, 4, 3], [np.nan, 6, 5], [8, 8, 7]]
+imputer = KNNImputer(n_neighbors=2, metric='nan_euclidean')
+imputer.fit_transform(X)
+
+nan_edclidean_distances([[np.nan, 6, 5], [3, 4, 3]], [[3, 4, 3], [1, 2, np.nan], [8, 8, 7]])
+
+input_file = './horse-colic.csv'
+df_data = pd.read_csv(input_file, header= None, na_values='?')
+data = df_data.values
+ix = [i for i in range(data.shape[1]) if i != 23]
+X, y = adta[:, ix], data[:, 23'
+
+for i in range(df_data.shape[1]):
+    n_miss df_data[[i]].isnull().sum()
+    perc = n_miss / df_data,shape[0] *100
+    if n_miss.values[0] > 0:
+        print('>Feat: %d, Missing: %d, Missing ratio: (%.2f%%)' % (i, n_miss, perc))
+
+print('KNNImputer before Missing: %d' % sum(np.isnan(X).flatten()))
+imputer = KNNImputer()
+imputer.fit(X)
+Xtrans = imputer.transform(X)
+print('KNNImputer after Missing: %d' % sum(np.isnan(Xtrans).flatten()))
+
+results = list()
+strategis = [str(i) for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ,15, 16, 20, 21]]
+for s in strategies:
+pipe = Pipeline(steps=[('imputer', KNNImputer(n_neighbors=int(s))), ('model', KNeighborsClassifier())])
+scores = []
+for k in range(20):
+    X_train, X_test, y_train, y_test = train_test_split(Xtrans, y, test_size=0.2)
+    pipe.fit(X_train, y_train)
+    score = pipe.score(X_test, y_test)
+    scores.append(score)
+results.append(np.array(scores))
+print('>k: %s, Acc Mean: %.3f, Std: %.3f' % (s, np.mean(scores), np.std(scores)))
+boxplot(results, labels= strategies. showmeans=True)
+show()
+```
 
