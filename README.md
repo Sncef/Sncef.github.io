@@ -352,7 +352,7 @@ TASK 1给出的方法有<br>
 对于特征进行一些统计描述 iris_featues.describe() <br>
 额，今天就到这里了，留个悬念给明天。。剩下的一点时间看看能不能优化下空间哈！
 
-###第六天
+### 第六天
 尝试掌握数据查看的方法。<br>
 额，不容易啊，一开始打多了一个字母，iris_features = pd.DataFrame(data=data.data, columns=data.feature_names)等于号左边的有s，右边的没有
 。估计是一种命名习惯之类的，还在探索。学会了群里前辈给出的查看的方法：print(data.key()).<br>
@@ -363,7 +363,7 @@ dict_keys(['data', 'target', 'target_names', 'DESCR', 'feature_names'])
 ```
 可是，我没设定target,DESCR啊，为啥会在keys里出现，莫非~~~~ 只能对这五个进行数据查看？为毛X_train看不了，然后，我仔细看了有关X_train诞生的代码，额，好像是随机数，可能，每次，不一样，所以，没法子看，只需要，知道，是，十分之八，就，好，了。。。看来，我还缺少很多能彻底看懂这三个task的前置知识啊，得多看书了。。。<br>
 
-#### 第7天
+### 第7天
 TASK 3<br>
 不知不觉时间已过半，第一天照常敲代码走起！！！<br>
 ```
