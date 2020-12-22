@@ -504,4 +504,8 @@ print('>k: %s, Acc Mean: %.3f, Std: %.3f' % (s, np.mean(scores), np.std(scores))
 boxplot(results, labels= strategies. showmeans=True)
 show()
 ```
+### 第八天
+将我不懂的列出来<br>
+[enumerate](https://www.runoob.com/python/python-func-enumerate.html) 可是前面的ind,k什么意思？我还想不明白。。<br>
+
 
