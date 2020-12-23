@@ -513,4 +513,12 @@ show()
 hhh,好像找到了！！！[edgecolor](https://www.cnblogs.com/OliverQin/p/7965435.html) 这里的K等价于edgecolor，这个值越大，边界轮廓越光滑！！！！，然后作者借用这特性，来进行K分类。。<br>
 
 ### 第九天
+欧式距离：minkowski <br>
+定义CLF的算法，FIT数据。。<br>
+用生成的FIT预测X_pred，ACC的计算<br>
+这里的KNN.FIT(X,y)是指n_neighbors=5, p=2 ??? label对应P=2，分为0，1，2三部分，这里要注意从0开始数。。设最小的为0，编号1<br?
+k在表格的圈定<br>
+拟合，欠拟合。K值的选择最终要与训练数据相适应，才是好的K <br>
+最后的有点复杂，明天看吧
+
 
