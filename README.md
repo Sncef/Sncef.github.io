@@ -510,4 +510,7 @@ show()
 [subplot](https://www.jianshu.com/p/de223a79217a) 看到这个，我想IND应该是跟辅助排序有关的吧。。。<br>
 根据6张图的变化，可以看出画布颜色的变化与K值有关，但是是怎么影响的，为啥较小的k值就相当于用较小的领域中的训练实例进行预测？好想把函数中的代码挖出来看。<br>
 [figsize](https://www.cnblogs.com/lijunjie9502/p/10327151.html)<br>
-hhh,好像找到了！！！[edgecolor](https://www.cnblogs.com/OliverQin/p/7965435.html) 这里的K等价于edgecolor，这个值越大，边界轮廓越光滑！！！！，然后作者借用这特性，来进行K分类。。
+hhh,好像找到了！！！[edgecolor](https://www.cnblogs.com/OliverQin/p/7965435.html) 这里的K等价于edgecolor，这个值越大，边界轮廓越光滑！！！！，然后作者借用这特性，来进行K分类。。<br>
+
+### 第九天
+
