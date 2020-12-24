@@ -519,6 +519,8 @@ hhh,好像找到了！！！[edgecolor](https://www.cnblogs.com/OliverQin/p/7965
 这里的KNN.FIT(X,y)是指n_neighbors=5, p=2 ??? label对应P=2，分为0，1，2三部分，这里要注意从0开始数。。设最小的为0，编号1<br?
 k在表格的圈定<br>
 拟合，欠拟合。K值的选择最终要与训练数据相适应，才是好的K <br>
-最后的有点复杂，明天看吧
+最后的有点复杂，明天看吧<br>
+### 第十天
+
 
 
